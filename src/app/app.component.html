@@ -1,10 +1,15 @@
 <div style="background-color: black; color: white" class="d-flex min-vh-100 justify-content-center">
     <div class="mt-5">
         <ul>
-            <li><a [routerLink]="'/a'">Route A</a></li>
-            <li><a [routerLink]="'/b'">Route B</a></li>
-            <li><a [routerLink]="'/c'">Route C</a></li>
+            <li><a href="/a" ryTryPushState>Route A</a></li>
+            <li><a href="/b" ryTryPushState>Route B</a></li>
+            <li><a href="/c" ryTryPushState>Route C</a></li>
         </ul>
+        <h1>@angular/router</h1>
         <router-outlet></router-outlet>
+        <h1>PushStateRouter</h1>
+        <ng-container *ngIf="pushStateRouter.active$ | async as active">
+            <ng-container *ngComponentOutlet="active.component"></ng-container>
+        </ng-container>
     </div>
 </div>

@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {PushStateRouter} from 'src/app/router/push-state-router';
 
 @Component({
     selector: 'app-root',
@@ -7,4 +8,6 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
     title = 'custom-router';
+
+    constructor(public pushStateRouter: PushStateRouter) {}
 }
